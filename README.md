@@ -16,8 +16,6 @@ PRINTSCREEN SETIAP HASIL RUN :
 - Class iPhone saya buat dengan dua atribut (property), yaitu $color untuk warna dan $storage untuk kapasitas penyimpanan.
 - Pada PHP, constructor wajib bernama __construct, sedangkan di Java namanya harus identik dengan nama class. Constructor ini langsung berjalan ketika objek dibuat dengan new iPhone(...) dan bertugas menyimpan data awal ke property.
 - Kata $this menunjuk ke objek yang sedang aktif, fungsinya sama persis dengan this pada Java.
-- Method getColor() dan getStorage() berperan sebagai getter, yaitu mengambil dan mengembalikan isi property menggunakan return.
-- Di file Main.php, saya membuat dua objek, $iphone13 dan $iphone14, yang berasal dari satu class yang sama. Proses membuat objek dari class ini dinamakan instantiation, dan masing-masing objek menyimpan datanya sendiri.
 - Perbedaan penulisan dengan Java yang paling terlihat: nama variabel selalu diawali tanda $, pemanggilan method memakai panah -> bukan titik, dan penggabungan teks memakai titik . bukan tanda +.
 
  2. PHP 02
@@ -27,7 +25,6 @@ PRINTSCREEN SETIAP HASIL RUN :
 - Pada class Mahasiswa, atribut $nama, $nim, dan $umur dibuat private, sehingga dari luar class datanya hanya dapat dibaca atau diubah melalui getter dan setter. Konsep ini disebut encapsulation.
 - Versi Java memiliki tiga constructor berbeda (overloading): tanpa parameter, dua parameter, dan tiga parameter. Karena PHP tidak menyediakan overloading, saya menggantinya dengan satu constructor saja yang parameternya diberi nilai bawaan (misalnya $nama = 'Belum Diisi'). Dengan cara ini constructor tetap bisa dipanggil dengan 0, 2, maupun 3 argumen.
 - Ketika objek dibuat lewat new Mahasiswa() tanpa isian apa pun, nilai bawaan yang terpakai, yaitu "Belum Diisi" untuk teks dan 0 untuk umur.
-- Sebaliknya, pemanggilan new Mahasiswa('Nenden Nuraini', '4523210144', 17) langsung mengisi seluruh data sejak objek dibentuk.
 - Method tampilkanInfo() bertugas menampilkan keseluruhan data mahasiswa ke layar.
   
  3. PHP 03 APP
@@ -69,6 +66,5 @@ PRINTSCREEN SETIAP HASIL RUN :
  Penjelasan:
 - Abstract class Vehicle berfungsi sebagai rancangan dasar untuk semua kendaraan, dengan atribut $name dan method showInfo(). Class jenis ini tidak dapat dibuat objeknya secara langsung dengan new; ia hanya boleh dijadikan induk oleh class lain.
 - Interface bisa dipahami sebagai perjanjian yang harus dipenuhi. Movable mewajibkan adanya method move(), dan Fuelable mewajibkan method refuel(). Setiap class yang memakai implements harus menuliskan isi dari method-method tersebut.
-- Car dan Boat sama-sama mewarisi Vehicle sekaligus mengimplementasikan dua interface di atas. Khusus Boat, method refuel() ditulis dengan cara yang sesuai untuk kapal.
 - Hal yang berbeda dari Java: interface pada PHP tidak dapat memuat default method. Sebagai penggantinya digunakan trait bernama FuelableDefault (berada dalam file Fuelable.php) yang menyediakan refuel() standar berisi "Mengisi bahan bakar umum.". Motor cukup menuliskan use FuelableDefault; untuk mendapatkan method tersebut tanpa menulisnya lagi.
 - Building hanya mewarisi Vehicle tanpa mengimplementasikan interface apa pun, akibatnya ia hanya memiliki showInfo() dan tidak punya move() maupun refuel().
