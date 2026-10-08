@@ -1,1 +1,12 @@
+PHP
+
+DOSEN PENGAMPU : Adi Wahyu Pribadi, S.Si., M.Kom
+
+NAMA : KAHLIL AR'RUMI KAICIL PUTERA
+NPM  : 4525210030
+
+TUGAS 1 PBO 
+INI MERUPAKAN HASIL PRINTSCREEN OUTPUT, CONVERT JAVA KE PHP  
+
+ PRINTSCREEN OUTPUT PHP 01 CLASS
 <img width="444" height="143" alt="Screenshot 2026-10-08 174526" src="https://github.com/user-attachments/assets/24c64801-e86f-4531-b150-3860c2e099cb" />
